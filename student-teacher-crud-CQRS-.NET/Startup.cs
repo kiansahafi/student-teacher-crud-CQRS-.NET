@@ -35,15 +35,12 @@ namespace student_teacher_crud_CQRS_.NET
 
             services.AddDbContext<StudentContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDbContext<TeacherContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            //services.AddDbContext<CourseContext>(options =>
-            //    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
             services.AddSingleton(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "CQRSMediator", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Student-Teacher-crud-CQRS", Version = "v1" });
             });
 
         }

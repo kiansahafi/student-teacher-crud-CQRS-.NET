@@ -1,19 +1,16 @@
 ﻿<Properties StartupConfiguration="{9D598347-FBD8-4688-8E04-C27A8E952F1F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="student-teacher-crud-CQRS-.NET/Controllers/TeacherController (copy).cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="student-teacher-crud-CQRS-.NET/appsettings.json">
     <Files>
-      <File FileName="student-teacher-crud-CQRS-.NET/Controllers/TeacherController (copy).cs" Line="14" Column="18" />
+      <File FileName="student-teacher-crud-CQRS-.NET/Program.cs" Line="17" Column="10" />
+      <File FileName="student-teacher-crud-CQRS-.NET/Startup.cs" Line="38" Column="1" />
+      <File FileName="student-teacher-crud-CQRS-.NET/appsettings.json" Line="11" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="student-teacher-crud-CQRS-.NET" expanded="True">
             <Node name="student-teacher-crud-CQRS-.NET" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TeacherController (copy).cs" selected="True" />
-              </Node>
-              <Node name="CQRS" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Notifications" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>

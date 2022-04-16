@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hQXuj+QvlnjGuwvMgI1q9aFV9B/Isc53JYnqJlM7TybkGHKb1FjeaY74qt3Qv+FHtM3UF4pwp0yWv+MiDjNZhQ==",
+  "dgSpecHash": "9h4OR66ZcLRUJ+0Q5ICbMWYDJ1zXKB98/8+tqyEda7UNkKbvdLYAMK6DO9SbNUYtTWGXEgfCJ+nkStSTw2RSXw==",
   "success": true,
-  "projectFilePath": "/Users/kiansahafi/Projects/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET.csproj",
+  "projectFilePath": "/Users/kiansahafi/Desktop/active projects/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET.csproj",
   "expectedPackageFiles": [
     "/Users/kiansahafi/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/kiansahafi/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",

@@ -15,34 +15,29 @@ namespace course_teacher_crud_CQRS_.NET.CQRS.Command
 
         public int CourseNumber { set; get; }
 
-        public Teacher Teacher { set; get; }
+        public int TeacherId { set; get; }
 
         public DateTime CourseTime { set; get; }
 
         public class UpdateCourseCommandHandler : IRequestHandler<UpdateCourseCommand, int>
         {
-            private StudentContext context;
+            private readonly StudentContext _context;
             public UpdateCourseCommandHandler(StudentContext context)
             {
-                this.context = context;
+                _context = context;
             }
             public async Task<int> Handle(UpdateCourseCommand command, CancellationToken cancellationToken)
             {
-                var course = context.Course.Where(a => a.Id == command.Id).FirstOrDefault();
+                var course = _context.Course.FirstOrDefault(a => a.Id == command.Id);
 
-                if (course == null)
-                {
-                    return default;
-                }
-                else
-                {
-                    course.Title = command.Title;
-                    course.CourseNumber = command.CourseNumber;
-                    course.Teacher = command.Teacher;
-                    course.CourseTime = command.CourseTime;
-                    await context.SaveChangesAsync();
-                    return course.Id;
-                }
+                if (course == null) return default;
+                course.Title = command.Title;
+                course.CourseNumber = command.CourseNumber;
+                course.TeacherId = command.TeacherId;
+                course.CourseTime = command.CourseTime;
+                await _context.SaveChangesAsync();
+                return course.Id;
+
             }
         }
 

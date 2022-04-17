@@ -13,16 +13,16 @@ namespace course_teacher_crud_CQRS_.NET.CQRS.Command
         public int Id { set; get; }
         public class DeleteCourseByIdCommandHandler : IRequestHandler<DeleteCourseByIdCommand, int>
         {
-            private StudentContext context;
+            private readonly StudentContext _context;
             public DeleteCourseByIdCommandHandler(StudentContext context)
             {
-                this.context = context;
+                _context = context;
             }
             public async Task<int> Handle(DeleteCourseByIdCommand command, CancellationToken cancellationToken)
             {
-                var course = await context.Course.Where(a => a.Id == command.Id).FirstOrDefaultAsync();
-                context.Course.Remove(course);
-                await context.SaveChangesAsync();
+                var course = await _context.Course.Where(a => a.Id == command.Id).FirstOrDefaultAsync(cancellationToken: cancellationToken);
+                _context.Course.Remove(course);
+                await _context.SaveChangesAsync();
                 return course.Id;
             }
         }

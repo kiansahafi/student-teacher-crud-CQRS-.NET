@@ -11,11 +11,11 @@ namespace student_teacher_crud_CQRS_.NET.CQRS.Command
     {
         public int Id { set; get; }
 
-        public string firstName { set; get; }
+        public string FirstName { set; get; }
 
-        public string lastName { set; get; }
+        public string LastName { set; get; }
 
-        public Course aquiredClass { set; get; }
+        public int AquiredClassId { set; get; }
 
         public string emailAddress { set; get; }
 
@@ -23,29 +23,24 @@ namespace student_teacher_crud_CQRS_.NET.CQRS.Command
 
         public class UpdateStudentCommandHandler : IRequestHandler<UpdateStudentCommand, int>
         {
-            private StudentContext context;
+            private readonly StudentContext _context;
             public UpdateStudentCommandHandler(StudentContext context)
             {
-                this.context = context;
+                _context = context;
             }
             public async Task<int> Handle(UpdateStudentCommand command, CancellationToken cancellationToken)
             {
-                var student = context.Student.Where(a => a.Id == command.Id).FirstOrDefault();
+                var student = _context.Student.FirstOrDefault(a => a.Id == command.Id);
 
-                if (student == null)
-                {
-                    return default;
-                }
-                else
-                {
-                    student.firstName = command.firstName;
-                    student.lastName = command.lastName;
-                    student.aquiredClass = command.aquiredClass;
-                    student.emailAddress = command.emailAddress;
-                    student.phoneNumber = command.phoneNumber;
-                    await context.SaveChangesAsync();
-                    return student.Id;
-                }
+                if (student == null) return default;
+                student.firstName = command.FirstName;
+                student.lastName = command.LastName;
+                student.auiredClassId = command.AquiredClassId;
+                student.emailAddress = command.emailAddress;
+                student.phoneNumber = command.phoneNumber;
+                await _context.SaveChangesAsync();
+                return student.Id;
+
             }
         }
 

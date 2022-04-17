@@ -5685,24 +5685,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/kiansahafi/.nuget/packages/": {}
+    "C:\\Users\\Me\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kiansahafi/Desktop/active projects/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET.csproj",
+      "projectUniqueName": "C:\\Users\\Me\\Documents\\GitHub\\student-teacher-crud-CQRS-.NET\\student-teacher-crud-CQRS-.NET\\student-teacher-crud-CQRS-.NET.csproj",
       "projectName": "student-teacher-crud-CQRS-.NET",
-      "projectPath": "/Users/kiansahafi/Desktop/active projects/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET.csproj",
-      "packagesPath": "/Users/kiansahafi/.nuget/packages/",
-      "outputPath": "/Users/kiansahafi/Desktop/active projects/student-teacher-crud-CQRS-.NET/student-teacher-crud-CQRS-.NET/obj/",
+      "projectPath": "C:\\Users\\Me\\Documents\\GitHub\\student-teacher-crud-CQRS-.NET\\student-teacher-crud-CQRS-.NET\\student-teacher-crud-CQRS-.NET.csproj",
+      "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Me\\Documents\\GitHub\\student-teacher-crud-CQRS-.NET\\student-teacher-crud-CQRS-.NET\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/kiansahafi/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://nuget.geeksms.uat.co/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5770,7 +5780,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

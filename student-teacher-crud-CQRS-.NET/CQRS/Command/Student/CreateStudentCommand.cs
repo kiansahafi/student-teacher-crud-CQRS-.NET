@@ -8,34 +8,36 @@ namespace student_teacher_crud_CQRS_.NET.CQRS.Command
 {
     public class CreateStudentCommand : IRequest<int>
     {
-        public string firstName { set; get; }
+        public string FirstName { set; get; }
 
-        public string lastName { set; get; }
+        public string LastName { set; get; }
 
-        public Course aquiredClass { set; get; }
+        public int AquiredClassId { set; get; }
 
-        public string emailAddress { set; get; }
+        public string EmailAddress { set; get; }
 
-        public string phoneNumber { set; get; }
+        public string PhoneNumber { set; get; }
 
         public class CreateStudentCommandHandler : IRequestHandler<CreateStudentCommand, int>
         {
-            private StudentContext context;
+            private readonly StudentContext _context;
             public CreateStudentCommandHandler(StudentContext context)
             {
-                this.context = context;
+                _context = context;
             }
             public async Task<int> Handle(CreateStudentCommand command, CancellationToken cancellationToken)
             {
-                var student = new Student();
-                student.firstName = command.firstName;
-                student.lastName = command.lastName;
-                student.aquiredClass = command.aquiredClass;
-                student.emailAddress = command.emailAddress;
-                student.phoneNumber = command.phoneNumber;
+                var student = new Student
+                {
+                    firstName = command.FirstName,
+                    lastName = command.LastName,
+                    auiredClassId = command.AquiredClassId,
+                    emailAddress = command.EmailAddress,
+                    phoneNumber = command.PhoneNumber
+                };
 
-                context.Student.Add(student);
-                await context.SaveChangesAsync();
+                _context.Student.Add(student);
+                await _context.SaveChangesAsync();
                 return student.Id;
             }
         }

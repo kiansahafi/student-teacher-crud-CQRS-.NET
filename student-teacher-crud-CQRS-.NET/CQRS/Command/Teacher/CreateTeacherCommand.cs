@@ -9,34 +9,36 @@ namespace teacher_teacher_crud_CQRS_.NET.CQRS.Command
 {
     public class CreateTeacherCommand : IRequest<int>
     {
-        public string firstName { set; get; }
+        public string FirstName { set; get; }
 
-        public string lastName { set; get; }
+        public string LastName { set; get; }
 
-        public string teacherNumber { set; get; }
+        public string TeacherNumber { set; get; }
 
-        public string emailAddress { set; get; }
+        public string EmailAddress { set; get; }
 
-        public string phoneNumber { set; get; }
+        public string PhoneNumber { set; get; }
 
         public class CreateTeacherCommandHandler : IRequestHandler<CreateTeacherCommand, int>
         {
-            private StudentContext context;
+            private readonly StudentContext _context;
             public CreateTeacherCommandHandler(StudentContext context)
             {
-                this.context = context;
+                _context = context;
             }
             public async Task<int> Handle(CreateTeacherCommand command, CancellationToken cancellationToken)
             {
-                var teacher = new Teacher();
-                teacher.firstName = command.firstName;
-                teacher.lastName = command.lastName;
-                teacher.teacherNumber = command.teacherNumber;
-                teacher.emailAddress = command.emailAddress;
-                teacher.phoneNumber = command.phoneNumber;
+                var teacher = new Teacher
+                {
+                    firstName = command.FirstName,
+                    lastName = command.LastName,
+                    teacherNumber = command.TeacherNumber,
+                    emailAddress = command.EmailAddress,
+                    phoneNumber = command.PhoneNumber
+                };
 
-                context.Teacher.Add(teacher);
-                await context.SaveChangesAsync();
+                _context.Teacher.Add(teacher);
+                await _context.SaveChangesAsync();
                 return teacher.Id;
             }
         }

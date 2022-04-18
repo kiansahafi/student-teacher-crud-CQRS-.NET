@@ -17,6 +17,7 @@ namespace student_teacher_crud_CQRS_.NET.CQRS.Command
             {
                 _context = context;
             }
+
             public async Task<int> Handle(DeleteStudentByIdCommand command, CancellationToken cancellationToken)
             {
                 var student = await _context.Student.Where(a => a.Id == command.Id).FirstOrDefaultAsync();

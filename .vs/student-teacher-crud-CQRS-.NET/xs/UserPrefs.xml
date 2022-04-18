@@ -1,17 +1,14 @@
 ﻿<Properties StartupConfiguration="{9D598347-FBD8-4688-8E04-C27A8E952F1F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="student-teacher-crud-CQRS-.NET/appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="student-teacher.tests/UnitTest1.cs">
     <Files>
-      <File FileName="student-teacher-crud-CQRS-.NET/Program.cs" Line="17" Column="10" />
-      <File FileName="student-teacher-crud-CQRS-.NET/Startup.cs" Line="38" Column="1" />
-      <File FileName="student-teacher-crud-CQRS-.NET/appsettings.json" Line="11" Column="27" />
+      <File FileName="student-teacher.tests/UnitTest1.cs" Line="6" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="student-teacher-crud-CQRS-.NET" expanded="True">
-            <Node name="student-teacher-crud-CQRS-.NET" expanded="True">
-              <Node name="appsettings.json" selected="True" />
-            </Node>
+            <Node name="student-teacher.tests" expanded="True" selected="True" />
+            <Node name="student-teacher-crud-CQRS-.NET" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -19,6 +16,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.student-teacher-crud-CQRS-.NET PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.student-teacher.tests FirstBuild="True" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
